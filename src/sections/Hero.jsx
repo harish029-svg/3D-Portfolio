@@ -1,5 +1,7 @@
 import {words} from "../constants/index.js"
 import Button from "../components/Button.jsx"
+import HeroExperience from "../components/HeroModels/HeroExperience.jsx"
+import AnimatedCounter from "../components/AnimatedCounter.jsx"
 const Hero = () => {
   return (
      <section id='hero' className='relative overflow-hidden'>
@@ -7,7 +9,7 @@ const Hero = () => {
             <img src="/images/bg.png" alt="background" />
         </div>
 
-       <div className='hero-layout'>
+       <div className='hero-layout xl:grid xl:grid-cols-[55%_45%] gap-10 xl:items-center items-start'>
         {
         // left: hero content
         <header className='flex flex-col justify-center md:w-full w-screen md:px-20 px-5'>
@@ -16,8 +18,8 @@ const Hero = () => {
                     <h1>Shaping 
                         <span className="slide">
                             <span className="wrapper">              
-                                {words.map((word)=>(
-                                    <span key={word.text} className="flex items-center md:gap-3 gap-1 pb-2">
+                                {words.map((word, index)=>(
+                                    <span key={`${word.text}-${index}`} className="flex items-center md:gap-3 gap-1 pb-2">
                                         <img src={word.imgPath} alt={word.text} className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50" />
 
                                         <span>{word.text}</span>
@@ -39,7 +41,12 @@ const Hero = () => {
             </div>
         </header>
         }
+
+        <div className='hero-3d-layout hidden md:block'>
+            <HeroExperience />
+        </div>
        </div>
+       <AnimatedCounter />
      </section>
     
   )

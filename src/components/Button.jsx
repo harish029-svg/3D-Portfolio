@@ -1,8 +1,8 @@
 const Button = () => {
   return (
-    <a className='cta-wrapper'>
-        <div className="cta-group group">
-            <div className="big-circle"/>
+    <a href="#counter" className='cta-wrapper'>
+        <div className="cta-button group">
+            <div className="bg-circle"/>
             <p className="text">See my work</p>
             <div className="arrow-wrapper">
                 <img src="/images/arrow-down.svg" alt="arrow" />
