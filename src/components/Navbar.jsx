@@ -49,6 +49,20 @@ const Navbar = () => {
 
         {/* Right side Action Buttons */}
         <div className='flex items-center gap-3'>
+          {/* Resume Quick Link */}
+          <a
+            href={personalInfo.resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Download / View Resume"
+            className='hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 hover:bg-cyan-500/20 text-xs sm:text-sm font-semibold transition-all hover:scale-105'
+          >
+            <svg className="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <span>Resume</span>
+          </a>
+
           {/* LeetCode Quick Link */}
           <a
             href={personalInfo.leetcode}
@@ -105,6 +119,19 @@ const Navbar = () => {
             ))}
           </ul>
           <div className='pt-2 border-t border-zinc-800 flex flex-col gap-2.5'>
+            <a
+              href={personalInfo.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className='w-full py-2.5 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-semibold text-center text-sm flex items-center justify-center gap-2'
+            >
+              <svg className="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span>View / Download Resume (PDF) ↗</span>
+            </a>
+
             <a
               href={personalInfo.leetcode}
               target="_blank"

@@ -43,6 +43,38 @@ const ContactSection = () => {
             </div>
 
             <div className='space-y-4'>
+              {/* Resume Card */}
+              <div className='p-4 rounded-2xl bg-black-200 border border-cyan-500/30 flex items-center justify-between hover:border-cyan-400 transition-colors'>
+                <div className='flex items-center gap-3.5'>
+                  <div className='size-11 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400'>
+                    <svg className="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className='text-xs text-cyan-300/80 font-medium uppercase tracking-wider'>Curriculum Vitae</p>
+                    <a
+                      href={personalInfo.resume}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className='text-sm md:text-base font-bold text-white hover:text-cyan-300 transition-colors flex items-center gap-1.5'
+                    >
+                      <span>Harish_Suthar_Resume.pdf</span>
+                      <span className='text-cyan-400'>↗</span>
+                    </a>
+                  </div>
+                </div>
+
+                <a
+                  href={personalInfo.resume}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className='px-3 py-1.5 text-xs font-semibold rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 transition-colors'
+                >
+                  View
+                </a>
+              </div>
+
               {/* LeetCode Card */}
               <div className='p-4 rounded-2xl bg-black-200 border border-amber-500/30 flex items-center justify-between hover:border-amber-400 transition-colors'>
                 <div className='flex items-center gap-3.5'>

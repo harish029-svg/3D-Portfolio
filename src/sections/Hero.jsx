@@ -54,6 +54,19 @@ const Hero = () => {
             <div className="flex flex-wrap items-center gap-3.5 pt-2 z-20">
               <Button />
 
+              {/* Resume / CV Button */}
+              <a
+                href={personalInfo.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-3.5 rounded-xl border border-cyan-500/40 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 hover:text-cyan-200 font-semibold text-sm md:text-base flex items-center gap-2.5 transition-all shadow-md shadow-cyan-500/10 hover:scale-[1.02]"
+              >
+                <svg className="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span>Resume / CV</span>
+              </a>
+
               {/* LeetCode Button */}
               <a
                 href={personalInfo.leetcode}
@@ -62,7 +75,7 @@ const Hero = () => {
                 className="px-5 py-3.5 rounded-xl border border-amber-500/40 bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 hover:text-amber-200 font-semibold text-sm md:text-base flex items-center gap-2.5 transition-all shadow-md shadow-amber-500/10 hover:scale-[1.02]"
               >
                 <img src="/images/logos/leetcode.svg" alt="LeetCode" className="size-5" />
-                <span>LeetCode (Harry029)</span>
+                <span>LeetCode</span>
               </a>
 
               <a
