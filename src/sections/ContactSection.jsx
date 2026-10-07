@@ -59,7 +59,7 @@ const ContactSection = () => {
                       rel="noopener noreferrer"
                       className='text-sm md:text-base font-bold text-white hover:text-cyan-300 transition-colors flex items-center gap-1.5'
                     >
-                      <span>Harish_Suthar_Resume.pdf</span>
+                      <span>Harish Suthar — Resume</span>
                       <span className='text-cyan-400'>↗</span>
                     </a>
                   </div>
